@@ -75,22 +75,6 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMoveListener, OnMapClickL
 
     }
 
-//    fun drawPoint(point: Point, selected: Boolean, manager: PointAnnotationManager) {
-//        bitmapFromDrawableRes(
-//            requireContext(),
-//            if (selected) R.drawable.ic_trip_point_selected
-//            else R.drawable.ic_trip_point_hidden
-//        )?.let {
-//            val options = PointAnnotationOptions()
-//                .withPoint(point)
-//                .withIconImage(it)
-//
-//            manager.create(options)
-//
-//        }
-//
-//    }
-
     private fun initMap() {
         viewModel.mapPosition.value.let {
             binding.mapView.getMapboxMap().setCamera(
@@ -112,7 +96,6 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMoveListener, OnMapClickL
         }
 
         binding.mapView.getMapboxMap().loadStyleUri(
-            // TODO: Change maps
             if (isDarkThemeOn(resources)) "mapbox://styles/doteq/ckpgtc3lf2gfz17l93fdxjh7k" else "mapbox://styles/doteq/clf7bo3n4001401qoy59a7w34"
         ) {
             if (Utilities.hasLocationPermissions(requireContext())) {

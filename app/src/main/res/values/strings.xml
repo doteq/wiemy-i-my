@@ -2,8 +2,6 @@
     <string name="app_name">Wiemy i My</string>
     <string name="mapbox_access_token">pk.eyJ1IjoiZG90ZXEiLCJhIjoiY2t4NTFod24zMjB5ZTJwb2JvYTRyNDNzaiJ9.kjzGTi3dgcoDyyKFlrGM9A</string>
     <string name="mapbox_theme_dark">mapbox://styles/doteq/ckx7z6lxu99bd15qae7rufxf4</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="location_permission_rationale_title">Uprawnienia lokalizacji</string>
     <string name="location_permission_rationale">Uprawnienia są wymagane, aby wyświetlić lokalizację użytkownika na mapie.</string>
     <string name="location_permission_denied">Prośba o uprawnienia została odrzucona</string>

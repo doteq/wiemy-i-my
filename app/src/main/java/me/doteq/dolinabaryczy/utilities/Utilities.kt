@@ -20,8 +20,6 @@ import kotlin.math.roundToInt
 import kotlin.math.sin
 
 object Utilities {
-
-    //TODO: Wydaje mi się że tu można użyć daggera do resources
     fun isDarkThemeOn(resources: Resources): Boolean {
         return resources.configuration.uiMode and
                 Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
