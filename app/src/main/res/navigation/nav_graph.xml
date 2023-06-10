@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav"
+    app:startDestination="@id/tripFragment">
+
+    <action
+            android:id="@+id/action_global_tripFragment"
+            app:destination="@id/tripFragment"
+            app:launchSingleTop="true" />
+
+    <fragment
+            android:id="@+id/tripFragment"
+            android:name="me.doteq.dolinabaryczy.ui.fragments.TripFragment"
+            android:label="TripFragment"
+            tools:layout="@layout/fragment_trip">
+        <action
+                android:id="@+id/action_tripFragment_to_locationFragment"
+                app:destination="@id/locationFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+            android:id="@+id/locationFragment"
+            android:name="me.doteq.dolinabaryczy.ui.fragments.LocationFragment"
+            android:label="LocationFragment"
+            tools:layout="@layout/fragment_location">
+        <action
+            android:id="@+id/action_locationFragment_to_questContentFragment"
+            app:destination="@id/questContentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_locationFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+            android:id="@+id/quizFragment"
+            android:name="me.doteq.dolinabaryczy.ui.fragments.QuizFragment"
+            android:label="QuizFragment"
+            tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/questContentFragment"
+        android:name="me.doteq.dolinabaryczy.ui.fragments.QuestContentFragment"
+        android:label="QuestContentFragment" >
+        <action
+            android:id="@+id/action_questContentFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+</navigation>
